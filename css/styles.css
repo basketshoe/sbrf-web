@@ -5250,7 +5250,7 @@ textarea.form-control-lg {
   --bs-modal-header-border-color: var(--bs-border-color);
   --bs-modal-header-border-width: 1px;
   --bs-modal-title-line-height: 1.5;
-  --bs-modal-footer-gap: 0.5rem;
+  --bs-modal-footer-gap:  rem;
   --bs-modal-footer-bg: ;
   --bs-modal-footer-border-color: var(--bs-border-color);
   --bs-modal-footer-border-width: 1px;
@@ -7782,8 +7782,13 @@ textarea.form-control-lg {
 }
 
 .py-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 1rem !important;
+  /*padding-bottom: 3rem !important;*/
+  
+position:fixed;
+bottom:0;
+width:100%;
+
 }
 
 .pt-0 {
@@ -10824,3 +10829,64 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+/* Loghi clienti */
+
+.clients-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 8px;
+}
+
+.clients-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  grid-template-rows: repeat(2, 1fr); /* two visual rows */
+  gap: 16px 24px; /* row gap then column gap */
+  align-items: center;
+  /* keep a single horizontal line of columns that fills vertically into 2 rows */
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 160px;
+  box-sizing: border-box;
+
+  border: 2px solid transparent;       /* keep layout stable */
+  border-radius: 8px;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .12s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Make logos focusable via keyboard: add tabindex="0" to each .logo in HTML.
+   Example: <div class="logo" role="listitem" tabindex="0">...</div> */
+
+.logo img {
+  max-height: 100px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hover, active and keyboard focus */
+.logo:hover,
+.logo:active,
+.logo:focus {
+  border-color: #0a84ff;               /* highlight color */
+  box-shadow: 0 6px 18px rgba(10,132,255,0.15);
+  transform: translateY(-3px);
+}
+
+/* Stronger visible focus for keyboard users */
+.logo:focus {
+  box-shadow: 0 0 0 4px rgba(10,132,255,0.12);
+}
+/* Optional: hide scrollbar but keep scrollable */
+.clients-scroll::-webkit-scrollbar { height: 8px; }
+.clients-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 4px; }
