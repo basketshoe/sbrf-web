@@ -10911,3 +10911,16 @@ textarea.form-control-lg {
 .clients-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 4px; }
 
 main { flex: 1 0 auto; /* grows to fill space */ }
+
+.contact { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; margin-right: 8px; }
+.contact img { display: inline-block; vertical-align: middle; flex: 0 0 auto; }
+.contact a { display: inline-block; vertical-align: middle; }
+
+.contact-section { background: linear-gradient(180deg,#f8fafc,#ffffff); }
+.contact-section .card { border-radius: .6rem; }
+.contact-section .btn img { filter: none; }
+.contact-list a { color: #0d6efd; text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+@media (max-width: 767.98px) {
+  .contact-section .card-body { padding: 1rem; }
+}

@@ -10,15 +10,14 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
-        <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
     </head>
+
     <body>
         <div class="layout-wrapper">
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="index.html">Elettromeccanica Sbaruffati Snc</a>
+                <a class="navbar-brand" href="index.html"><img class="img-fluid mb-lg-0" src="assets/img/LOGO_EMS_BLACK.png" height="100" width="300"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -31,29 +30,69 @@
                 </div>
             </div>
         </nav>
-        <!-- Inizio qua-->
-        <div class="container px-4 px-lg-5">
-            <!-- Heading Row-->
-            <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div>
-                    <h1 class="font-weight-light">Contatti</h1>
-                    <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                        <div class="col-lg-7">
-                            <img src="assets/img/tel.svg" width="25" height="25">&nbsp;<a href="tel:+390377832177">0377 832177</a>
-                            <img src="assets/img/mail.svg" width="20" height="20">&nbsp;<a href="mailto:assistenza@emsbaruffati.it">assistenza@emsbaruffati.it</a>
-                            <img src="assets/img/mail.svg" width="20" height="20">&nbsp;<a href="mailto:amministrazione@emsbaruffati.it">amministrazione@emsbaruffati.it</a>
-                            <img src="assets/img/pec.svg" width="30" height="30"><a href="mailto:sbaruffatiem@ticertifica.it">sbaruffatiem@ticertifica.it</a>
+        <!---->
+            <div class="container px-5">
+              <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h2 class="h4 mb-3">Contatti</h2>
+                      <p class="mb-3">ELETTROMECCANICA SBARUFFATI snc<br><strong>Via Anna Frank 23, 26841 Casalpusterlengo (LO)</strong></p>
+                    
+                      <div class="d-flex flex-column flex-sm-row gap-2 mb-3">
+                        <a class="btn btn-primary d-flex align-items-center" href="tel:+390377832177">
+                          <img src="assets/img/tel.svg" alt="" width="20" height="20" class="me-2"> 0377 832177
+                        </a>
+                        <a class="btn btn-outline-primary d-flex align-items-center" href="mailto:assistenza@emsbaruffati.it">
+                          <img src="assets/img/mail.svg" alt="" width="20" height="20" class="me-2"> assistenza@emsbaruffati.it
+                        </a>
+                      </div>
+                  
+                      <ul class="list-unstyled mb-3 contact-list">
+                        <li class="mb-2"><strong>Amministrazione:</strong> <a href="mailto:amministrazione@emsbaruffati.it">amministrazione@emsbaruffati.it</a></li>
+                        <li class="mb-2"><strong>PEC:</strong> <a href="mailto:sbaruffatiem@ticertifica.it">sbaruffatiem@ticertifica.it</a></li>
+                        <li><strong>Partita IVA:</strong> 08005500155</li>
+                      </ul>
+                  
+                      <div class="hours mb-3">
+                        <strong>Orari:</strong>
+                            <table class="table table-sm mb-0">
+                                <tbody>
+                                  <tr><td>Lun-Ven</td><td>08:00-12:00 / 13:30-18:00</td></tr>
+                                  <tr><td>Sabato</td><td>08:00-12:00</td></tr>
+                                  <tr><td>Domenica</td><td>Chiuso</td></tr>
+                                </tbody>
+                            </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="col-lg-6">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-0">
+                      <div id="map" style="width: 100%; height: 100%;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.758439180266!2d9.659215976728948!3d45.17174125290401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4780df4791641535%3A0xba140b5678753581!2sElettromeccanica%20Sbaruffati%20Snc!5e0!3m2!1sit!2sit!4v1774972564943!5m2!1sit!2sit" style="border:0;" height="100%" width="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
+                  </div>
                 </div>
+
+            
+              </div>
             </div>
-        </div>
+        
+
         <!-- Footer-->
         <footer class="bg-dark">
             <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">ELETTROMECCANICA SBARUFFATI snc - Via Anna Frank 23 - 26841 - Casalpusterlengo LO</p></div>
             <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">P.I. 08005500155</p></div>
-            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white"><img src="assets/img/tel.svg" alt="" width="25" height="25">&nbsp;<a href="tel:+390377832177">0377 832177</a>&nbsp;<img src="assets/img/mail.svg" width="20" height="20">&nbsp;<a href="mailto:assistenza@emsbaruffati.it">assistenza@emsbaruffati.it</a>&nbsp;<img src="assets/img/mail.svg" width="20" height="20">&nbsp;<a href="mailto:amministrazione@emsbaruffati.it">amministrazione@emsbaruffati.it</a></p></div>
-            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white"><img src="assets/img/pec.svg" width="25" height="25">&nbsp;<a href="mailto:sbaruffatiem@ticertifica.it">sbaruffatiem@ticertifica.it</a></p></div>
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">
+                <span class="contact"><img src="assets/img/tel.svg" width="20" height="20"><a href="tel:+390377832177">0377 832177</a></span>
+                <span class="contact"><img src="assets/img/mail.svg" width="20" height="20"><a href="mailto:assistenza@emsbaruffati.it">assistenza@emsbaruffati.it</a></span>
+                <span class="contact"><img src="assets/img/mail.svg" width="20" height="20"><a href="mailto:amministrazione@emsbaruffati.it">amministrazione@emsbaruffati.it</a></span>
+                <span class="contact"><img src="assets/img/pec.svg" width="20" height="20"><a href="mailto:sbaruffatiem@ticertifica.it">sbaruffatiem@ticertifica.it</a></span>
+            </p></div>
         </footer>
         </div>
         <!-- Bootstrap core JS-->
