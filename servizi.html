@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="it">
+    <style>
+        .hero{display:flex;flex-direction:column;gap:12px;padding:18px 0}
+        .lead{color:#444;margin:0}
+        .btn-primary{display:inline-block;padding:10px 16px;background:#0d6efd;border-radius:6px;color:#fff;text-decoration:none}
+        .services-grid .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:18px 0}
+        .card{border:1px solid #e6e6e6;padding:12px;border-radius:6px;background:#fff}
+        .card img{height:140px;width:100%;object-fit:contain;border-radius:4px;object-position: center;}
+        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+        .gallery img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+        input,textarea,select{padding:8px;border:1px solid #ccc;border-radius:4px;font-size:14px}
+        @media (prefers-color-scheme:dark){body{background:#111;color:#ddd}.card{background:#121212;border-color:#222}}
+    </style>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,7 +28,7 @@
             <!-- Responsive navbar-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><img class="img-fluid mb-lg-0" src="assets/img/LOGO_EMS_BLACK.png" height="100" width="250"></a>
+                    <a class="navbar-brand" href="index.html"><img class="img-fluid mb-lg-0" src="assets/img/LOGO_EMS_BLACK.png" height="100" width="300"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -29,6 +41,98 @@
                     </div>
                 </div>
             </nav>
+            <!-- Lavorazioni -->
+            <section id="lavorazioni" class="container">
+              <!-- Hero -->
+              <header class="hero">
+                <h1>Lavorazioni metalliche e componenti su misura</h1>
+                <p class="lead">Taglio laser, piegatura, saldatura e finiture per industrie meccaniche, arredamento e contract.</p>
+                <a href="contatti.html" class="btn-primary">Richiedi un preventivo</a>
+              </header>
+          
+              <!-- Servizi - cards -->
+              <section aria-labelledby="servizi-title" class="services-grid">
+                <h2 id="servizi-title">Servizi</h2>
+                <div class="cards">
+                  <article class="card">
+                    <img src="assets/lavorazioni/avvolgimento-motori-elettrici.jpg" alt="" loading="lazy">
+                    <h3>Avvolgimenti motori elettrici</h3>
+                    <p>La descrizione andrà qua, non la farei eccessivamente lunga. Questo è un esempio di descrizione di lunghezza corretta. Starei sui 150-200 caratteri.</p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/installazione-elettropompe.jpg" alt="" loading="lazy">
+                    <h3>Installazione elettropompe</h3>
+                    <p>Questa invece è una descrizione troppo lunga. ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ.</p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/installazione-motori-elettrici.jpg" alt="" loading="lazy">
+                    <h3>Installazione motori elettrici</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/manutenzione-gruppi-antincendio.png" alt="" loading="lazy">
+                    <h3>Manutenzione gruppi antincendio</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/impianti-di-pressurizzazione.jpg" alt="" loading="lazy">
+                    <h3>Impianti di pressurizzazione</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/compressori-volumetrici.jpg" alt="" loading="lazy">
+                    <h3>Compressori volumetrici industriali</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/manutenzione-motori-elettrici.jpg" alt="" loading="lazy">
+                    <h3>Manutenzione motori elettrici</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/!!!" alt="" loading="lazy">
+                    <h3>Variatori di velocità</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/pompe-sommerse-lodi.jpg" alt="" loading="lazy">
+                    <h3>Pompe sommerse</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/stazioni-di-sollevamento.jpg" alt="" loading="lazy">
+                    <h3>Stazioni di sollevamento</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/rivestimenti-anti-usura.jpg" alt="" loading="lazy">
+                    <h3>Rivestimenti anti usura</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/riduttori-lodi.jpg" alt="" loading="lazy">
+                    <h3>Riduttori</h3>
+                    <p>Ripariamo ed effettuiamo interventi di manutenzione ordinaria e straordinaria su qualsiasi tipo, marca e dimensione di riduttori, motoriduttori e moltiplicatori.</p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/ricostruzione-albero-motore.jpg" alt="" loading="lazy">
+                    <h3>Ricostruzione alberi motore</h3>
+                    <p></p>
+                  </article>
+                  <article class="card">
+                    <img src="assets/lavorazioni/riparazione-motori-elettrici.jpg" alt="" loading="lazy">
+                    <h3>Riparazione motori elettrici</h3>
+                    <p></p>
+                  </article>
+                </div>
+              </section>
+          
+              <!-- Certificazioni -->
+              <section aria-labelledby="qualita-title" class="quality">
+                <h2 id="qualita-title">Qualità e certificazioni</h2>
+                <p>Controllo qualità in linea, misurazioni dimensionali e collaudi funzionali. (Inserire certificazioni: ISO 9001, UNI, EN, ecc.)</p>
+              </section>
+            </section>
 
             <!-- Footer-->
             <footer class="bg-dark">
@@ -40,6 +144,7 @@
                 <span class="contact"><img src="assets/img/mail.svg" width="20" height="20"><a href="mailto:amministrazione@emsbaruffati.it">amministrazione@emsbaruffati.it</a></span>
                 <span class="contact"><img src="assets/img/pec.svg" width="20" height="20"><a href="mailto:sbaruffatiem@ticertifica.it">sbaruffatiem@ticertifica.it</a></span>
             </p></div>
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white"><a href="policy.html">Cookie Policy</a></p></div>
         </footer>
         </div>
         <!-- Bootstrap core JS-->
