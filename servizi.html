@@ -3,7 +3,6 @@
     <style>
         .hero{display:flex;flex-direction:column;gap:12px;padding:18px 0}
         .lead{color:#444;margin:0}
-        .btn-primary{display:inline-block;padding:10px 16px;background:#0d6efd;border-radius:6px;color:#fff;text-decoration:none}
         .services-grid .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:18px 0}
         .card{border:1px solid #e6e6e6;padding:12px;border-radius:6px;background:#fff}
         .card img{height:140px;width:100%;object-fit:contain;border-radius:4px;object-position: center;}
@@ -11,6 +10,39 @@
         .gallery img{width:100%;height:100%;object-fit:cover;border-radius:4px}
         input,textarea,select{padding:8px;border:1px solid #ccc;border-radius:4px;font-size:14px}
         @media (prefers-color-scheme:dark){body{background:#111;color:#ddd}.card{background:#121212;border-color:#222}}
+        .overlay {
+          position: fixed;
+          inset: 0;
+          display: none; /* mostrata via JS */
+          align-items: center;
+          justify-content: center;
+          background: rgba(0,0,0,0.6); /* scurisce lo sfondo */
+          z-index: 9999;
+          padding: 20px;
+        }
+        .overlay[aria-hidden="false"] { display: flex; }
+
+        .overlay-content {
+          background: #fff;
+          max-width: 800px;
+          width: 100%;
+          border-radius: 8px;
+          padding: 20px;
+          position: relative;
+          box-shadow: 0 12px 40px rgba(0,0,0,.3);
+        }
+        .overlay-close {
+          position: absolute;
+          top: 8px;
+          right: 10px;
+          background: transparent;
+          border: none;
+          font-size: 28px;
+          line-height: 1;
+          cursor: pointer;
+        }
+
+        .overlay-content img { max-width: 100%; height: auto; border-radius:6px; margin-bottom:12px; }
     </style>
     <head>
         <meta charset="utf-8" />
@@ -47,93 +79,84 @@
               <header class="hero">
                 <h1>Lavorazioni metalliche e componenti su misura</h1>
                 <p class="lead">Taglio laser, piegatura, saldatura e finiture per industrie meccaniche, arredamento e contract.</p>
-                <a href="contatti.html" class="btn-primary">Richiedi un preventivo</a>
+                <a href="contatti.html" class="btn btn-primary">Richiedi un preventivo</a>
               </header>
           
               <!-- Servizi - cards -->
               <section aria-labelledby="servizi-title" class="services-grid">
                 <h2 id="servizi-title">Servizi</h2>
                 <div class="cards">
-                  <article class="card">
+                  <article class="card" data-title="Avvolgimenti motori elettrici" data-desc="DESC...">
                     <img src="assets/lavorazioni/avvolgimento-motori-elettrici.jpg" alt="" loading="lazy">
                     <h3>Avvolgimenti motori elettrici</h3>
-                    <p>La descrizione andrà qua, non la farei eccessivamente lunga. Questo è un esempio di descrizione di lunghezza corretta. Starei sui 150-200 caratteri.</p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Installazione elettropompe" data-desc="DESC...">
                     <img src="assets/lavorazioni/installazione-elettropompe.jpg" alt="" loading="lazy">
                     <h3>Installazione elettropompe</h3>
-                    <p>Questa invece è una descrizione troppo lunga. ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ.</p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Installazione motori elettrici" data-desc="DESC...">
                     <img src="assets/lavorazioni/installazione-motori-elettrici.jpg" alt="" loading="lazy">
                     <h3>Installazione motori elettrici</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Manutenzione gruppi antincendio" data-desc="DESC...">
                     <img src="assets/lavorazioni/manutenzione-gruppi-antincendio.png" alt="" loading="lazy">
                     <h3>Manutenzione gruppi antincendio</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Impianti di pressurizzazione" data-desc="DESC...">
                     <img src="assets/lavorazioni/impianti-di-pressurizzazione.jpg" alt="" loading="lazy">
                     <h3>Impianti di pressurizzazione</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Compressori volumetrici industriali" data-desc="DESC...">
                     <img src="assets/lavorazioni/compressori-volumetrici.jpg" alt="" loading="lazy">
                     <h3>Compressori volumetrici industriali</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Manutenzione motori elettrici" data-desc="DESC...">
                     <img src="assets/lavorazioni/manutenzione-motori-elettrici.jpg" alt="" loading="lazy">
                     <h3>Manutenzione motori elettrici</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
-                    <img src="assets/lavorazioni/!!!" alt="" loading="lazy">
+                  <article class="card" data-title="Variatori di velocità" data-desc="DESC...">
+                    <img src="assets/lavorazioni/" alt="" loading="lazy">
                     <h3>Variatori di velocità</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Pompe sommerse" data-desc="DESC...">
                     <img src="assets/lavorazioni/pompe-sommerse-lodi.jpg" alt="" loading="lazy">
                     <h3>Pompe sommerse</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Stazioni di sollevamento" data-desc="DESC...">
                     <img src="assets/lavorazioni/stazioni-di-sollevamento.jpg" alt="" loading="lazy">
                     <h3>Stazioni di sollevamento</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Rivestimenti anti usura" data-desc="DESC...">
                     <img src="assets/lavorazioni/rivestimenti-anti-usura.jpg" alt="" loading="lazy">
                     <h3>Rivestimenti anti usura</h3>
-                    <p></p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Riduttori" data-desc="DESC...">
                     <img src="assets/lavorazioni/riduttori-lodi.jpg" alt="" loading="lazy">
                     <h3>Riduttori</h3>
-                    <p>Ripariamo ed effettuiamo interventi di manutenzione ordinaria e straordinaria su qualsiasi tipo, marca e dimensione di riduttori, motoriduttori e moltiplicatori.</p>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Ricostruzione albero motore" data-desc="DESC...">
                     <img src="assets/lavorazioni/ricostruzione-albero-motore.jpg" alt="" loading="lazy">
-                    <h3>Ricostruzione alberi motore</h3>
-                    <p></p>
+                    <h3>Ricostruzione albero motore</h3>
                   </article>
-                  <article class="card">
+                  <article class="card" data-title="Riparazione motori elettrici" data-desc="DESC...">
                     <img src="assets/lavorazioni/riparazione-motori-elettrici.jpg" alt="" loading="lazy">
                     <h3>Riparazione motori elettrici</h3>
-                    <p></p>
                   </article>
+                  
+                  <!-- altre card... -->
+                </div>
+
+                <!-- Overlay/modal -->
+                <div id="overlay" class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+                  <div class="overlay-content" role="document">
+                    <button id="overlay-close" class="overlay-close" aria-label="Chiudi">x</button>
+                    <img id="overlay-img" src="" alt="">
+                    <h3 id="overlay-title"></h3>
+                    <p id="overlay-desc"></p>
+                  </div>
                 </div>
               </section>
-          
-              <!-- Certificazioni -->
-              <section aria-labelledby="qualita-title" class="quality">
-                <h2 id="qualita-title">Qualità e certificazioni</h2>
-                <p>Controllo qualità in linea, misurazioni dimensionali e collaudi funzionali. (Inserire certificazioni: ISO 9001, UNI, EN, ecc.)</p>
-              </section>
             </section>
-
             <!-- Footer-->
             <footer class="bg-dark">
             <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">ELETTROMECCANICA SBARUFFATI snc - Via Anna Frank 23 - 26841 - Casalpusterlengo LO</p></div>
@@ -151,5 +174,60 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Gestione apertura/chiusura overlay-->
+         <script>
+          const cards = document.querySelectorAll('.card');
+          const overlay = document.getElementById('overlay');
+          const overlayImg = document.getElementById('overlay-img');
+          const overlayTitle = document.getElementById('overlay-title');
+          const overlayDesc = document.getElementById('overlay-desc');
+          const overlayClose = document.getElementById('overlay-close');
+          const overlayLogosContainer = document.createElement('div');
+          
+          
+          let lastFocused = null;
+                  
+          cards.forEach(card => {
+            card.addEventListener('click', () => {
+              lastFocused = document.activeElement;
+              const img = card.querySelector('img');
+              const title = card.dataset.title || card.querySelector('h3')?.textContent;
+              const desc = card.dataset.desc || card.querySelector('p')?.textContent;
+            
+              overlayImg.src = img?.src || '';
+              overlayImg.alt = img?.alt || '';
+              overlayTitle.textContent = title || '';
+              overlayDesc.textContent = desc || '';
+            
+              overlay.setAttribute('aria-hidden', 'false');
+              overlayClose.focus();
+              document.body.style.overflow = 'hidden'; // evita scroll sotto overlay
+            });
+          
+            card.addEventListener('keydown', e => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
+              }
+            });
+          });
+          
+          function closeOverlay() {
+            overlay.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (lastFocused) lastFocused.focus();
+          }
+          
+          overlayClose.addEventListener('click', closeOverlay);
+          
+          overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeOverlay(); // clic sul backdrop chiude
+          });
+          
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.getAttribute('aria-hidden') === 'false') closeOverlay();
+          });
+        </script>
+
     </body>
 </html>
